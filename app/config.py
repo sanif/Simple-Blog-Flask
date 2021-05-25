@@ -1,3 +1,4 @@
+
 from os import environ, path
 
 from dotenv import load_dotenv
@@ -16,8 +17,13 @@ class BaseConfig(object):
     API_KEY = environ.get('API_KEY')
     BROKER_URL = environ.get('BROKER_URL')
     RESULT_BACKEND = environ.get('RESULT_BACKEND')
+
+    SQLALCHEMY_DATABASE_URI = environ.get('DATABASE_URL')
+
     LOG_INFO_FILE = path.join(basedir, 'log', 'info.log')
     LOG_CELERY_FILE = path.join(basedir, 'log', 'celery.log')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+
     LOGGING = {
         'version': 1,
         'disable_existing_loggers': False,
