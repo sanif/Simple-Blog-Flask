@@ -24,6 +24,7 @@ flask-bcrypt = "*"
 python-slugify = "*"
 mysqlclient = "*"
 pyjwt = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.9"
