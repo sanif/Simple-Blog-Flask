@@ -24,6 +24,7 @@ flask-bcrypt = "*"
 python-slugify = "*"
 mysqlclient = "*"
 pyjwt = "*"
+flask-restful = "*"
 
 [requires]
 python_version = "3.9"
