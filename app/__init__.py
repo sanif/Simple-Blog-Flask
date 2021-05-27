@@ -8,7 +8,7 @@ from flask_cors import CORS
 
 from .config import config as app_config
 from .models import bcrypt, db
-from flask_restx import Api, Resource, fields
+
 celery = Celery(__name__)
 
 

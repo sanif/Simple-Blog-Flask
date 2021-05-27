@@ -25,6 +25,7 @@ python-slugify = "*"
 mysqlclient = "*"
 pyjwt = "*"
 flask-restful = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.9"
