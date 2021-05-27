@@ -23,6 +23,7 @@ class BaseConfig(object):
     LOG_INFO_FILE = path.join(basedir, 'log', 'info.log')
     LOG_CELERY_FILE = path.join(basedir, 'log', 'celery.log')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SECRET_KEY = environ.get('SECRET_KEY')
 
     LOGGING = {
         'version': 1,

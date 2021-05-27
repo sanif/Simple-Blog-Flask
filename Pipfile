@@ -29,6 +29,7 @@ gunicorn = "*"
 marshmallow-sqlalchemy = "*"
 flask-marshmallow = "*"
 safrs = "*"
+flask-admin = "*"
 
 [requires]
 python_version = "3.9"

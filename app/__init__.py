@@ -5,6 +5,8 @@ import bcrypt
 from celery import Celery
 from dotenv import load_dotenv
 from flask import Flask
+from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
 from flask_cors import CORS
 from flask_restful import Api, Resource
 from safrs import SAFRSAPI, SAFRSBase
@@ -52,12 +54,16 @@ def create_app():
     # Blueprints
     create_blueprints(app)
 
+    # Admin
+    create_admin(app)
+
     @app.route('/', methods=['GET'])
     def index():
         """
         Blog endpoint
         """
         return 'Server is up and running'
+
     with app.app_context():
         # Open APi
         create_api(app)
@@ -83,6 +89,12 @@ def create_api(app, HOST="localhost", PORT=5000,
     api = SAFRSAPI(app, host=HOST, port=PORT, prefix=API_PREFIX)
     api.expose_object(UserModel)
     api.expose_object(PostModel)
+
+
+def create_admin(app):
+    admin = Admin(app, name='Dashboard')
+    admin.add_view(ModelView(UserModel, db.session))
+    admin.add_view(ModelView(PostModel, db.session))
 
 
 def get_environment():

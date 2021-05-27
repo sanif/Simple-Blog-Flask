@@ -1,0 +1,3 @@
+ * Serving Flask app 'Blog' (lazy loading)
+ * Environment: dev
+ * Debug mode: on
