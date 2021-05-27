@@ -2,7 +2,16 @@
 
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](LICENSE)
 
-# Getting Started
+
+This app is hosted at https://sanif-simple-blog-flask.herokuapp.com/
+
+## Admin Panel
+https://sanif-simple-blog-flask.herokuapp.com/admin
+
+## Swagger/OpenApi
+https://sanif-simple-blog-flask.herokuapp.com/api/v2
+
+## Getting Started
 
 ### Prerequisites
 
@@ -39,4 +48,6 @@ $ pipenv install -d --python 3.9
 
 - Run flask app `python run.py`
 - Logs would be generated under `log` folder
+- Run migrations using `flask db upgrade`
+
 

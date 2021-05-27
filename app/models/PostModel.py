@@ -3,7 +3,7 @@ import datetime
 
 from slugify import slugify
 
-from . import BaseModel, bcrypt, db, ma
+from . import BaseModel, db, ma
 
 
 class PostModel(BaseModel):
