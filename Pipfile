@@ -26,6 +26,9 @@ mysqlclient = "*"
 pyjwt = "*"
 flask-restful = "*"
 gunicorn = "*"
+marshmallow-sqlalchemy = "*"
+flask-marshmallow = "*"
+safrs = "*"
 
 [requires]
 python_version = "3.9"

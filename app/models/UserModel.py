@@ -1,14 +1,15 @@
 # src/models/UserModel.py
 import datetime
 
-from marshmallow import Schema, fields
+from flask_restful import Resource
+from safrs.base import SAFRSBase
 
-from app.models.PostModel import PostSchema
+import app.models.PostModel
 
-from . import bcrypt, db
+from . import BaseModel, bcrypt, db, ma
 
 
-class UserModel(db.Model):
+class UserModel(BaseModel):
     """
     User Model
     """
@@ -23,17 +24,8 @@ class UserModel(db.Model):
     created_at = db.Column(db.DateTime)
     modified_at = db.Column(db.DateTime)
     posts = db.relationship('PostModel', backref='users', lazy=True)
-
+    # http_methods = {"GET", "POST"}
     # class constructor
-    def __init__(self, data):
-        """
-        Class constructor
-        """
-        self.name = data.get('name')
-        self.username = data.get('username')
-        self.password = self.__generate_hash(data.get('password'))
-        self.created_at = datetime.datetime.utcnow()
-        self.modified_at = datetime.datetime.utcnow()
 
     def save(self):
         db.session.add(self)
@@ -75,14 +67,15 @@ class UserModel(db.Model):
         return '<username {}>'.format(self.username)
 
 
-class UserSchema(Schema):
+class UserSchema(ma.SQLAlchemySchema):
     """
     User Schema
     """
-    id = fields.Int(dump_only=True)
-    name = fields.Str(required=True)
-    username = fields.Str(required=True)
-    password = fields.Str(required=True)
-    created_at = fields.DateTime(dump_only=True)
-    modified_at = fields.DateTime(dump_only=True)
-    posts = fields.Nested(PostSchema, many=True)
+    class Meta:
+        model = UserModel
+    id = ma.auto_field()
+    name = ma.auto_field()
+    username = ma.auto_field()
+    created_at = ma.auto_field()
+    modified_at = ma.auto_field()
+    posts = ma.auto_field()

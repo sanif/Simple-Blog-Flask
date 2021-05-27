@@ -1,13 +1,19 @@
 import logging.config
 from os import environ
 
+import bcrypt
 from celery import Celery
 from dotenv import load_dotenv
 from flask import Flask
 from flask_cors import CORS
+from flask_restful import Api, Resource
+from safrs import SAFRSAPI, SAFRSBase
+
+from app.models import bcrypt, db, ma
+from app.models.PostModel import PostModel
+from app.models.UserModel import UserModel
 
 from .config import config as app_config
-from .models import bcrypt, db
 
 celery = Celery(__name__)
 
@@ -37,12 +43,28 @@ def create_app():
     # Other initializations
     bcrypt.init_app(app)
     db.init_app(app)
+    ma.init_app(app)
 
     # migration
     from flask_migrate import Migrate
     migrate = Migrate(app, db)
 
     # Blueprints
+    create_blueprints(app)
+
+    @app.route('/', methods=['GET'])
+    def index():
+        """
+        Blog endpoint
+        """
+        return 'Server is up and running'
+    with app.app_context():
+        # Open APi
+        create_api(app)
+    return app
+
+
+def create_blueprints(app):
     from .views.CoreView import core as core_blueprint
     app.register_blueprint(
         core_blueprint,
@@ -55,14 +77,12 @@ def create_app():
         url_prefix='/api/v1/users'
     )
 
-    @app.route('/', methods=['GET'])
-    def index():
-        """
-        Blog endpoint
-        """
-        return 'Server is up and running'
 
-    return app
+def create_api(app, HOST="localhost", PORT=5000,
+               API_PREFIX="/api/v2"):
+    api = SAFRSAPI(app, host=HOST, port=PORT, prefix=API_PREFIX)
+    api.expose_object(UserModel)
+    api.expose_object(PostModel)
 
 
 def get_environment():

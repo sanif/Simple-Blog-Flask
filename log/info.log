@@ -1,0 +1,150 @@
+[May 28 2021 00:16:42] - Blog - ERROR - Exception on /api/v2/users/ [POST]
+Traceback (most recent call last):
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful_swagger_2/__init__.py", line 39, in decorator
+    return f(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/views.py", line 83, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful_swagger_2/swagger.py", line 219, in inner
+    return f(self, *args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/safrs/safrs_api.py", line 635, in method_wrapper
+    abort(status_code, errors=[errors])
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 31, in abort
+    original_flask_abort(http_status_code)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/werkzeug/exceptions.py", line 940, in abort
+    _aborter(status, *args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/werkzeug/exceptions.py", line 923, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+[May 28 2021 00:24:40] - Blog - ERROR - Exception on /api/v2/users/ [POST]
+Traceback (most recent call last):
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful_swagger_2/__init__.py", line 39, in decorator
+    return f(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/views.py", line 83, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful_swagger_2/swagger.py", line 219, in inner
+    return f(self, *args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/safrs/safrs_api.py", line 635, in method_wrapper
+    abort(status_code, errors=[errors])
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 31, in abort
+    original_flask_abort(http_status_code)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/werkzeug/exceptions.py", line 940, in abort
+    _aborter(status, *args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/werkzeug/exceptions.py", line 923, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+[May 28 2021 00:25:38] - Blog - ERROR - Exception on /api/v2/users/ [POST]
+Traceback (most recent call last):
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful_swagger_2/__init__.py", line 39, in decorator
+    return f(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/views.py", line 83, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful_swagger_2/swagger.py", line 219, in inner
+    return f(self, *args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/safrs/safrs_api.py", line 635, in method_wrapper
+    abort(status_code, errors=[errors])
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 31, in abort
+    original_flask_abort(http_status_code)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/werkzeug/exceptions.py", line 940, in abort
+    _aborter(status, *args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/werkzeug/exceptions.py", line 923, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+[May 28 2021 00:25:55] - Blog - ERROR - Exception on /api/v2/users/ [POST]
+Traceback (most recent call last):
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful_swagger_2/__init__.py", line 39, in decorator
+    return f(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/views.py", line 83, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful_swagger_2/swagger.py", line 219, in inner
+    return f(self, *args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/safrs/safrs_api.py", line 635, in method_wrapper
+    abort(status_code, errors=[errors])
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 31, in abort
+    original_flask_abort(http_status_code)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/werkzeug/exceptions.py", line 940, in abort
+    _aborter(status, *args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/werkzeug/exceptions.py", line 923, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+[May 28 2021 00:30:24] - Blog - ERROR - Exception on /api/v2/users/ [POST]
+Traceback (most recent call last):
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful_swagger_2/__init__.py", line 39, in decorator
+    return f(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/views.py", line 83, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful_swagger_2/swagger.py", line 219, in inner
+    return f(self, *args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/safrs/safrs_api.py", line 635, in method_wrapper
+    abort(status_code, errors=[errors])
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 31, in abort
+    original_flask_abort(http_status_code)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/werkzeug/exceptions.py", line 940, in abort
+    _aborter(status, *args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/werkzeug/exceptions.py", line 923, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+[May 28 2021 00:31:14] - Blog - ERROR - Exception on /api/v2/users/ [POST]
+Traceback (most recent call last):
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful_swagger_2/__init__.py", line 39, in decorator
+    return f(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask/views.py", line 83, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful_swagger_2/swagger.py", line 219, in inner
+    return f(self, *args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/safrs/safrs_api.py", line 635, in method_wrapper
+    abort(status_code, errors=[errors])
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/flask_restful/__init__.py", line 31, in abort
+    original_flask_abort(http_status_code)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/werkzeug/exceptions.py", line 940, in abort
+    _aborter(status, *args, **kwargs)
+  File "/home/sanifss/.local/share/virtualenvs/Portfolio-UVOeSvIO/lib/python3.9/site-packages/werkzeug/exceptions.py", line 923, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.

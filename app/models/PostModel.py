@@ -1,13 +1,12 @@
 # src/models/PostModel.py
 import datetime
 
-from marshmallow import Schema, fields
 from slugify import slugify
 
-from . import db
+from . import BaseModel, bcrypt, db, ma
 
 
-class PostModel(db.Model):
+class PostModel(BaseModel):
     """
     Post Model
     """
@@ -63,14 +62,16 @@ class PostModel(db.Model):
         return '<id {}>'.format(self.id)
 
 
-class PostSchema(Schema):
+class PostSchema(ma.SQLAlchemySchema):
     """
     Post Schema
     """
-    id = fields.Int(dump_only=True)
-    title = fields.Str(required=True)
-    slug = fields.Str(required=True)
-    contents = fields.Str(required=True)
-    owner_id = fields.Int(required=True)
-    created_at = fields.DateTime(dump_only=True)
-    modified_at = fields.DateTime(dump_only=True)
+    class Meta:
+        model = PostModel
+    id = ma.auto_field()
+    title = ma.auto_field()
+    slug = ma.auto_field()
+    contents = ma.auto_field()
+    owner_id = ma.auto_field()
+    created_at = ma.auto_field()
+    modified_at = ma.auto_field()
